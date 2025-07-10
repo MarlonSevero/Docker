@@ -1,0 +1,14 @@
+FROM centos:7
+ENV PORT=80
+
+#mirror bug fix
+RUN sed -i 's|mirrorlist=|#mirrorlist=|g' /etc/yum.repos.d/CentOS-Base.repo && \
+    sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-Base.repo && \
+    yum clean all && \
+    yum makecache && \
+    yum install httpd php mod_php php-mysql -y
+COPY ./web/ /var/www/html
+EXPOSE $PORT
+WORKDIR /etc/httpd
+CMD ["-D", "FOREGROUND"]
+ENTRYPOINT ["/usr/sbin/httpd"]
