@@ -1,0 +1,9 @@
+FROM mariadb
+ENV MYSQL_ROOT_PASSWORD=123456
+ENV MYSQL_DATABASE=backup
+ENV MYSQL_USER=express
+ENV MYSQL_PASSWORD=AllSafe0!
+EXPOSE 3306
+COPY /db/backup.slq /docker-entrypoint-initdb.d/
+CMD ["mysqld"]
+VOLUME /var/lib/mysql

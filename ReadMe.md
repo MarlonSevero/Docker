@@ -7,12 +7,10 @@ Este repositório contém **Dockerfiles** e recursos relacionados para a criaç�
 ---
 
 ## 🛠️ Imagens disponíveis
-
-| Pasta     | Descrição                               | Porta padrão | Base       |
+| Pasta     | Descrição                                | Porta padrão | Base       |
 |-----------|------------------------------------------|--------------|------------|
 | `web/`    | Imagem com Apache + PHP                  | `80`         | CentOS 7   |
-| `zabbix/` | Container do agente/servidor Zabbix      | `10050`      | Debian/Alma|
-
+| `mariadb/`| Container do mariadb                     | `3306`       | Debian     |
 ---
 
 ## 📦 Como construir as imagens
