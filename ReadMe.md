@@ -1,6 +1,6 @@
 # 🐳 Docker Images Repo
 
-Este repositório contém **Dockerfiles** e recursos relacionados para a criação de imagens Docker personalizadas, utilizadas em diversos projetos (ex: servidores web, monitoramento, gateways, etc).
+Este repositório contém **Dockerfiles** e recursos relacionados para a criação de imagens Docker personalizadas, e sendo utilizadas para subir uma pagina simples PHP + Mysql
 
 ---
 
@@ -11,7 +11,7 @@ Este repositório contém **Dockerfiles** e recursos relacionados para a criaç�
 |-----------|------------------------------------------|--------------|------------|
 | `web/`    | Imagem com Apache + PHP                  | `80`         | CentOS 7   |
 | `mariadb/`| Imagem do mariadb                        | `3306`       | Debian     |
-| `nginx/`  | Imagem do nginx			       | `80`	      | Debian	   |
+| `nginx/`  | Imagem do nginx			               | `80`	      | Debian	   |
 
 
 ---
@@ -21,15 +21,16 @@ Este repositório contém **Dockerfiles** e recursos relacionados para a criaç�
 Você pode construir qualquer imagem com o comando abaixo:
 
 ```bash
-🧱 Primeiro Contruir a imagem
-docker build -t nome-da-imagem ./pasta
+🧱 Primeiro Contruir as imagens
+docker compose build
 
 🚀 Segundo rodar um container
-docker run -d --name meucontainer -p 8080:80 minhaweb
+docker compose up -d 
 
 🌐 Terceiro acesso ao container
 Após subir a imagem web, acesse via navegador:
-http://localhost:8080
+http://ip_host:5555
+
 
 
 

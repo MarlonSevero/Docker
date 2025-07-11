@@ -23,7 +23,7 @@ services:
     networks:
       - redelocal
     ports: 
-      - "3306:3306"
+      - "3306"
 
   web1:
     build:
