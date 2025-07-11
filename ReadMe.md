@@ -10,7 +10,10 @@ Este repositório contém **Dockerfiles** e recursos relacionados para a criaç�
 | Pasta     | Descrição                                | Porta padrão | Base       |
 |-----------|------------------------------------------|--------------|------------|
 | `web/`    | Imagem com Apache + PHP                  | `80`         | CentOS 7   |
-| `mariadb/`| Container do mariadb                     | `3306`       | Debian     |
+| `mariadb/`| Imagem do mariadb                        | `3306`       | Debian     |
+| `nginx/`  | Imagem do nginx			       | `80`	      | Debian	   |
+
+
 ---
 
 ## 📦 Exemplo de como construir as imagens e rodar um container docker.
