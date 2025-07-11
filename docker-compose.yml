@@ -14,6 +14,14 @@ services:
       - "web1"
       - "web2"
       - "web3"
+
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins
+    user: root
+    ports:
+      - "8080:8080"   # Interface Web
+      - "50000:50000" # Comunicação com agentes
   db:
     build:
       dockerfile: ./Dockerfiledb

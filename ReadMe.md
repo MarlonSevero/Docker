@@ -11,7 +11,7 @@ Este repositório contém **Dockerfiles** e recursos relacionados para a criaç�
 | `web/`    | Imagem com Apache + PHP                  | `80`         | CentOS 7   |
 | `mariadb/`| Imagem do mariadb                        | `3306`       | Debian     |
 | `nginx/`  | Imagem do nginx			       | `80`	      | Debian	   |
-
+| `jenkins/`| Imagem do Jenkins                        | `50000`      | Debian     |
 
 ---
 
@@ -28,7 +28,7 @@ docker compose up -d
 
 🌐 Terceiro acesso ao container
 Após subir a imagem web, acesse via navegador:
-http://ip_host:5555
+http://127.0.0.1:5555
 
 
 
